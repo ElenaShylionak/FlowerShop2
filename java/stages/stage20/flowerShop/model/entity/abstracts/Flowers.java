@@ -42,12 +42,15 @@ public class Flowers implements Comparable<Flowers> {
                 ", weigh=" + weigh +
                 '}';
     }
+    // Этот метод сравнивает содержимое объектов и выводит значение типа boolean.
+    // Значение true - если содержимое эквивалентно, и false — если нет.
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Flowers)) return false;
-        Flowers product = (Flowers) o;
-        return Double.compare(product.price, price) == 0;
+        Flowers flowers = (Flowers) o;
+        return Double.compare(flowers.price, price) == 0;
 
     }
 
@@ -64,7 +67,7 @@ public class Flowers implements Comparable<Flowers> {
     //   * положительное, если вызывающий объект больше объекта, переданного в качестве параметра;
     //   * отрицательное, если вызывающий объект меньше объекта, переданного в качестве параметра;
     //   * нуль, если объекты равны.
-    
+
     @Override
     public int compareTo(Flowers o) {
         return 0;
