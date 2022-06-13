@@ -35,6 +35,7 @@ public class Flowers implements Comparable<Flowers> {
     public void setWeigh(double weigh) {
         this.weigh = weigh;
     }
+
     @Override
     public String toString() {
         return "Flowers{" +
@@ -62,7 +63,8 @@ public class Flowers implements Comparable<Flowers> {
         System.out.println("hashCode");
         return Objects.hash(price);
     }
-    //Метод compareTo в Java сравнивает вызывающий объект с объектом, переданным в качестве параметра, и возвращает в результате выполнения сравнения целое число:
+    //Метод compareTo в Java сравнивает вызывающий объект с объектом, переданным в качестве параметра,
+    // и возвращает в результате выполнения сравнения целое число:
 
     //   * положительное, если вызывающий объект больше объекта, переданного в качестве параметра;
     //   * отрицательное, если вызывающий объект меньше объекта, переданного в качестве параметра;
