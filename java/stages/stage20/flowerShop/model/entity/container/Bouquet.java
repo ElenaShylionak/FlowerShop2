@@ -1,11 +1,11 @@
 package by.itstep.elena.java.stages.stage20.flowerShop.model.entity.container;
 
-import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Flowers;
+import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Flower;
 
 public interface Bouquet { //аналог корзины в мегашоп
 
         int size();  //Метод size () - это метод коллекции List.
-        Flowers get(int index); //???
+        Flower get(int index); //???
     }
 
 

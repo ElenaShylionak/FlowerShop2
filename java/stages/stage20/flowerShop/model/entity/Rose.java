@@ -1,11 +1,11 @@
 package by.itstep.elena.java.stages.stage20.flowerShop.model.entity;
 
-import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Flowers;
+import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Flower;
 
 import java.util.Objects;
 
 
-public class Rose extends Flowers {
+public class Rose extends Flower {
 
     String Color; // задать воспрос на счет энам
 

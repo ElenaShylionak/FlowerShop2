@@ -4,16 +4,16 @@ package by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts;
 
 import java.util.Objects;
 
-public class Flowers implements Comparable<Flowers> {
+public class Flower implements Comparable<Flower> {
     //Для упорядочивания объектов одного типа, хранящихся в массиве или коллекции есть интерфейс Comparable
 
     private double price; //стоимость цветка
     private double weigh; //вес цветка
 
-    public Flowers() { //дефолтный конструктор
+    public Flower() { //дефолтный конструктор
     }
 
-    public Flowers(double weightFlower, double priceFlower){ //конструктор с параметрами
+    public Flower(double weightFlower, double priceFlower){ //конструктор с параметрами
 
         price = priceFlower;
         weigh = weightFlower;
@@ -49,9 +49,10 @@ public class Flowers implements Comparable<Flowers> {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Flowers)) return false;
-        Flowers flowers = (Flowers) o;
-        return Double.compare(flowers.price, price) == 0;
+        if (!(o instanceof Flower)) return false;
+        Flower flowers = (Flower) o;
+        return Double.compare(flowers.price, price) == 0 &&
+                Double.compare(flowers.weigh, weigh) == 0;
 
     }
 
@@ -61,7 +62,7 @@ public class Flowers implements Comparable<Flowers> {
     @Override
     public int hashCode() {
         System.out.println("hashCode");
-        return Objects.hash(price);
+        return Objects.hash(price,weigh);
     }
     //Метод compareTo в Java сравнивает вызывающий объект с объектом, переданным в качестве параметра,
     // и возвращает в результате выполнения сравнения целое число:
@@ -71,7 +72,7 @@ public class Flowers implements Comparable<Flowers> {
     //   * нуль, если объекты равны.
 
     @Override
-    public int compareTo(Flowers o) {
+    public int compareTo(Flower o) {
         return 0;
     }
 }

@@ -1,9 +1,9 @@
 package by.itstep.elena.java.stages.stage20.flowerShop.model.logic.sortstrategy;
 
-import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Flowers;
+import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Flower;
 
 public interface BouquetSortable {
-    boolean compare(Flowers flower1, Flowers flower2); //уточнить на счет сравнения
+    boolean compare(Flower flower1, Flower flower2); //уточнить на счет сравнения
 }
 
 //Компаратор - это тот, кто выполняет сравнивание, то есть делает compare.

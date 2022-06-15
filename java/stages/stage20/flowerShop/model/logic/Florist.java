@@ -10,16 +10,16 @@ public class Florist {
 
     }
 
-  public static double calculateTotalPrice(Iterable iterable) { //метод, котрый считает стоимость букета
+ // public static double calculateTotalPrice(Iterable iterable) { //метод, котрый считает стоимость букета
 
-      MyIterator iterator = iterable.getIterator();
+     // MyIterator iterator = iterable.getIterator();
 
-           double total = 0;
+       //    double total = 0;
 
-           while(iterator.hasNext()){
-             total += iterator.next().getPrice(); //почему + или =
-          }
+       //    while(iterator.hasNext()){
+       //      total += iterator.next().getPrice(); //почему + или =
+      //    }
 
-           return total;
-        }
+       //    return total;
+   //     }
 }

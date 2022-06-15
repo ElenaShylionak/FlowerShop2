@@ -1,10 +1,10 @@
 package by.itstep.elena.java.stages.stage20.flowerShop.model.entity;
 
-import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Flowers;
+import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Flower;
 
 import java.util.Objects;
 
-public class Lavender extends Flowers { //производный класс Flowers
+public class Lavender extends Flower { //производный класс Flowers
 
     String variety; //сорт лаванды
     String view; //вид лаванды
