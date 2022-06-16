@@ -1,10 +1,8 @@
-package by.itstep.elena.java.stages.stage20.flowerShop.model.entity.container;
+package by.itstep.elena.java.stages.stage20.flowerShop.model.entity;
 
 import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.DecorationBouquet;
 
 import java.util.Objects;
-
-import static java.awt.Color.*;
 
 public class PolythenePack extends DecorationBouquet {
      String color;

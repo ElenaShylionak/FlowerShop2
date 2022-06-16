@@ -2,7 +2,7 @@ package by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts;
 
 import java.util.Objects;
 
-public class DecorationBouquet  {
+public class DecorationBouquet {
 
 
     private double priceDecoration; //стоимость упаковки
@@ -10,7 +10,8 @@ public class DecorationBouquet  {
 
     public DecorationBouquet() {
     }
-    public DecorationBouquet(double priceDecoration, double weighDecoration) {
+
+    public DecorationBouquet(double priceDecoration , double weighDecoration) {
         this.priceDecoration = priceDecoration;
         this.weighDecoration = weighDecoration;
     }
@@ -48,21 +49,22 @@ public class DecorationBouquet  {
         if (this == o) return true;
         if (!(o instanceof DecorationBouquet)) return false;
         DecorationBouquet pack = (DecorationBouquet) o;
-        return Double.compare(pack.priceDecoration, priceDecoration) == 0 && Double.compare(pack.weighDecoration, weighDecoration) == 0;
-
+        return Double.compare(pack.priceDecoration , priceDecoration) == 0 && Double.compare(pack.weighDecoration , weighDecoration) == 0;
 
 
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(priceDecoration, weighDecoration);
+        return Objects.hash(priceDecoration , weighDecoration);
     }
+
 
     //С английского "Comparable" переводится как "сравнимый".
     // Имплементируя этот интерфейс мы как бы говорим "Теперь объекты этого класса можно сравнивать между собой!"
-   // @Override
-  //  public int compareTo(DecorationBouquet o) {
-    // return 0;
+    // @Override
+    public int compareTo(DecorationBouquet o) {
+        return 0;
+    }
 }
 
