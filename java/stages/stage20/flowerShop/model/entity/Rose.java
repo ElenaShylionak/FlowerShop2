@@ -7,15 +7,15 @@ import java.util.Objects;
 
 public class Rose extends Flower {
 
-    String Color; // задать воспрос на счет энам
+    String Color;
 
     enum Color{ WHITE, RED, PINK, YELLOW, BLUE, BEIGE
     }
     String budShape;
     String size;
 
-    public Rose(String color) { //конструктор enum
-        Color = color;
+    public Rose(String color) { //конструктор копирования
+          Color = color;
     }
 
     public Rose() { //дефолтный конструктор

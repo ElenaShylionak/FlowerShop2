@@ -2,6 +2,8 @@ package by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts;
 
 //Это базовый класс имеет важную переменную price, 2 конструктора, гетеры и сетеры, так как поля приватные
 
+import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.еxception.FlowerPriceWrongPriceException;
+
 import java.util.Objects;
 
 public class Flower implements Comparable<Flower> {
@@ -23,9 +25,16 @@ public class Flower implements Comparable<Flower> {
         return price;
     }
 
-    public void setPrice(double price) {
-        if (price > 0) //защита от дурака, цена не может быть мельше нуля
-        this.price = price;
+    public void setPrice(double price) throws FlowerPriceWrongPriceException { //будем генерировать логический Exception
+        //Если цена нормальная, то мы изменяем состояние, а если нет, то в нашем случае ничего не происходит - void
+        //А это значит если клиент вводит значение неправильное, программа ничего не возвращает
+        //Единственный способ что-то возвратить – это генерировать Ошибку. В нашем случае, логический Exception
+
+        if (price > 0) {//защита от дурака, цена не может быть мельше нуля
+            this.price = price;
+        }else {
+            throw new FlowerPriceWrongPriceException("Incorrect price data entered");
+        }
     }
 
     public double getWeigh() {

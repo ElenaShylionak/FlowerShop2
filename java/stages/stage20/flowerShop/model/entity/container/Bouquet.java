@@ -11,8 +11,8 @@ public class Bouquet {
     public List<DecorationBouquet> decorationBouquets; //упаковка букета
 
     public Bouquet() {
-        //и в каи в качестве имплементации заложим arraylist, который будет реализовывать наш список продуктовчестве
-        // имплементации заложим arraylist, который будет реализовывать наш список цветов и упаковки
+        //в качестве имплементации заложим arraylist, который будет реализовывать наш список цветов и упаковки
+
         flowers = new ArrayList<>();
         decorationBouquets = new ArrayList<>();
     }
@@ -37,7 +37,7 @@ public class Bouquet {
     public boolean remove(DecorationBouquet decorationBouquet) {
         return decorationBouquets.add(decorationBouquet);
     }
-
+    //размер
     public int size() {
         return flowers.size();
     }
@@ -62,7 +62,7 @@ public class Bouquet {
     public String toString() {
         StringBuilder builder = new StringBuilder();
 
-        if (size() == 0 || sizeDec() == 0) {
+        if (size() == 0 || sizeDec() == 0) { //защита от дурака
            builder.append("There are no flowers in the bouquet") ;
         }else {
             builder.append("Bouquet: \n");
