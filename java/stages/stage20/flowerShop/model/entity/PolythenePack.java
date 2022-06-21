@@ -5,9 +5,18 @@ import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Dec
 import java.util.Objects;
 
 public class PolythenePack extends DecorationBouquet {
-     String color;
-     String compound; //cостав
-     String shape; // форма
+     private String color;
+        enum color{TRANSPARENT, WHITE, YELLOW, SILVER, ROSE, GOLD
+
+    }
+    private String compound; //cостав
+    enum compound{ CELOPHAN, MESH, FOIL, ORGANZA
+
+    }
+     private String shape; // форма
+    enum shape{ROLL, CONE, TUBUS,
+
+    }
 
     public PolythenePack() {
 

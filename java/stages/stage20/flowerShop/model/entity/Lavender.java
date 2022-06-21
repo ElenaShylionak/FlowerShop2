@@ -6,13 +6,16 @@ import java.util.Objects;
 
 public class Lavender extends Flower { //производный класс Flowers
 
-    String variety; //сорт лаванды
-    String view; //вид лаванды
+    private String variety; //сорт лаванды
+    enum variety {JAGGED, NARROWLEAVED, BROADLEAVED, HYBRID
+
+    }
+    private String view; //вид лаванды
 
     public Lavender() { //дефолтный конструктор
     }
 
-    public Lavender(String name, int weight, int price, String variety, String view) { //конструктор с параметрами
+    public Lavender(int weight, int price, String variety, String view) { //конструктор с параметрами
         super(weight, price); //обращаемся к базовому классу
         this.variety = variety; //this для ссылки на текущий объект
         this.view = view;

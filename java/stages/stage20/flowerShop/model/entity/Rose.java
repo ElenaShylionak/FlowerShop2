@@ -7,34 +7,29 @@ import java.util.Objects;
 
 public class Rose extends Flower {
 
-    String Color;
-
-    enum Color{ WHITE, RED, PINK, YELLOW, BLUE, BEIGE
+    String color;
+    enum color{ WHITE, RED, PINK, YELLOW, BLUE, BEIGE
     }
-    String budShape;
-    String size;
+
+    String budShape; // форма бутона
+    enum budShape{ CONICAL, CUPPED, ROUND, ROSETTESHAPED, POMPON
+    }
 
     public Rose(String color) { //конструктор копирования
-          Color = color;
+          color = color;
     }
 
     public Rose() { //дефолтный конструктор
          }
 
-    public Rose(String budShape, int weight, int price, String size, String Color) { //конструктор с параметрами
+    public Rose(int weight, int price, String color, String budShape) { //конструктор с параметрами
         super(weight, price); //обращаемся к базовому классу
-        this.size = size; //this для ссылки на текущий объект
+       //this для ссылки на текущий объект
         this.budShape = budShape;
-        this.Color = Color;
+        this.color = color;
 
     }
-    public String getSize() {
-        return size;
-    }
 
-    public void setSize(String size) {
-        this.size = size;
-    }
 
     public String getBudShape() {
         return budShape;
@@ -50,22 +45,22 @@ public class Rose extends Flower {
         if (!(o instanceof Rose)) return false;
         if (!super.equals(o)) return false;
         Rose rose = (Rose) o;
-        if (Color.equals(rose.Color))
-            if (Objects.equals(budShape, rose.budShape)) if (Objects.equals(size, rose.size)) return true;
+        if (color.equals(rose.color))
+            if (Objects.equals(budShape, rose.budShape)) return true;
         return false;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(),budShape, size, Color);
+        return Objects.hash(super.hashCode(),budShape, color);
     }
 
     @Override
     public String toString() {
         return "Rose{" +
-                "Color='" + Color + '\'' +
+                "Color='" + color + '\'' +
                 ", budShape='" + budShape + '\'' +
-                ", size='" + size + '\'' +
+                ", size='" +  '\'' +
                 '}';
     }
 

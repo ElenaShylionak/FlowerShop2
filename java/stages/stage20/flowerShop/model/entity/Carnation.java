@@ -7,8 +7,11 @@ import java.util.Objects;
 public class Carnation extends Flower { //производный класс Flowers
 
 
-    String nameView; //название вида гвоздики
-    String color;  //цвет
+    private String nameView; //название вида гвоздики
+
+    private String color;  //цвет
+    enum color{ WHITE, RED, PINK, YELLOW, BLUE, BEIGE, ORANGE
+    }
 
     public Carnation() { //дефолтный конструктор
     }
