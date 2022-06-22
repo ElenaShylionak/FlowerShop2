@@ -4,11 +4,12 @@ import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Dec
 import by.itstep.elena.java.stages.stage20.flowerShop.model.entity.abstracts.Flower;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-public class Bouquet {
+public class Bouquet { // !!!!!переписать контейнер  - сделать прослойку где цветаы и оформление букета!!!!
     private List<Flower> flowers; //цветы
-    public List<DecorationBouquet> decorationBouquets; //упаковка букета
+    private List<DecorationBouquet> decorationBouquets; //упаковка букета
 
     public Bouquet() {
         //в качестве имплементации заложим arraylist, который будет реализовывать наш список цветов и упаковки
@@ -22,10 +23,15 @@ public class Bouquet {
         decorationBouquets = decorationBouquetList;
     }
 
+    public <E> Bouquet(LinkedList<E> es) { //!!!!!
+
+    }
+
     //реализукм метод add (добавить  в букет)
-    public void add(Flower flower , DecorationBouquet decorationBouquet) {
+    public void add(Flower flower) {
         flowers.add(flower);
-        decorationBouquets.add(decorationBouquet);
+        DecorationBouquet decorationBouquet;
+        //decorationBouquets.add(decorationBouquet);
     }
 
     //реализуем метод remove (удалить из букета)

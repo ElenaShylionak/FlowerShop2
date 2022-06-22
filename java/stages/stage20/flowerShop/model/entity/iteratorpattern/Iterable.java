@@ -1,9 +1,9 @@
-package by.itstep.elena.java.stages.stage20.flowerShop.model.entity.iteratorpattern;
-
-public interface Iterable {
-    //
-        MyIterator getIterator();
-    }
+//package by.itstep.elena.java.stages.stage20.flowerShop.model.entity.iteratorpattern;
+//
+//public interface Iterable {
+//    //
+//        MyIterator getIterator();
+//    }
 
 //Iteratble - это итеративный интерфейс. Все классы коллекции в JAVA реализуют итеративный интерфейс Iterable.
 //Итератор является итеративным классом.
